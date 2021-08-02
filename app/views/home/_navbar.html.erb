@@ -3,14 +3,14 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">SUPERHERO NAME GENERATOR</a>
+    <%= link_to 'SUPERHERO NAME GENERATOR', root_path, class:"navbar-brand" %>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="/">Home Page</a>
+          <%= link_to 'Home Page', root_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home/team">Create A Team</a>
+        <%= link_to 'Create A Team', home_team_path, class:"nav-link" %>
         </li>
       </ul>
     </div>

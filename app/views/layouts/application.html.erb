@@ -7,12 +7,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-  <%= render partial:'home/navbar' %>
-  <div class="container">
-    <%= yield %>
-  </div>
+    <%= render partial:'home/navbar' %>
+      <div class="container">
+        <%= yield %>
+      </div>
   </body>
+  
+  <footer>
+    <center>
+      Copyright &#169 2021 - Bill Mathis - All Rights Reserved
+    </center>
+  </footer>
 </html>
