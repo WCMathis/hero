@@ -1,11 +1,32 @@
+<br/>
 <div class="card">
     <div class="card-header">
         <h5 class="card-header"><%= link_to 'Create a Superhero', root_path %> </h5>
             <div class="card-body">
-    
-            This is some text within a card body.
+            <br/>
+                <div class="row">
+                    <div class ="col-md-4">
+                        <img src="<%= @avatar %>">
+                    </div>
+                    
+                    <div class="col-md-4">
+                        Your Superhero Name:<br/>
+                        <%=@hero_name%><br/><br/>
+                        Your Superhero Power:<br/>
+                        <%=@hero_power%><br/><br/>
 
+                        Your Undercover Day Job Is:<br/>
+                        <%=@job_title%><br/>
+                        <br/>
+                        Your Corporate Superpower Is:<br/>
+                        <%=@corp_power%>
+                    </div>
+
+                    <div class="col-md-4">
+                    </div>
+                </div>
             </div>
+            <br/>
     <h5 class="card-footer"><%= link_to 'Create a Team', home_team_path %></h5>
 </div>
 
