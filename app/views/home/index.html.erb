@@ -1,7 +1,7 @@
 <br/>
 <div class="card">
-    <div class="card-header">
-        <h5 class="card-header"><%= link_to 'Create a Superhero', root_path %> </h5>
+    <div class="card-header gray">
+        <h5 class="card-header gray"><%= link_to 'Create a Superhero', root_path %> </h5>
             <div class="card-body">
             <br/>
                 <div class="row">
@@ -10,16 +10,20 @@
                     </div>
                     
                     <div class="col-md-4">
+                        <h5>
                         Your Superhero Name:<br/>
-                        <%=@hero_name%><br/><br/>
+                        <span class="red"> <%=@hero_name%></span><br/><br/>
                         Your Superhero Power:<br/>
-                        <%=@hero_power%><br/><br/>
+                        <span class="red"><%=@hero_power%></span><br/><br/><br/>
+                        </h5>
 
+                        <h6>
                         Your Undercover Day Job Is:<br/>
-                        <%=@job_title%><br/>
+                        <span class="corp_red"><%=@job_title%></span><br/>
                         <br/>
                         Your Corporate Superpower Is:<br/>
-                        <%=@corp_power%>
+                        <span class="corp_red"><%=@corp_power%></span>
+                        </h6>
                     </div>
 
                     <div class="col-md-4">
