@@ -11,6 +11,7 @@ class HomeController < ApplicationController
 
     @rand_num = rand(1..1000)
     @set_num = rand(1..4)
+    @bg_num = rand(1..2)
 
     # Randomly pick a character
     if @set_num == 1
@@ -24,7 +25,6 @@ class HomeController < ApplicationController
     end
 
     # Randomly pick a background
-    @bg_num = rand(1..2)
     if @bg_num == 1
       @bg = "bg1"
     else
@@ -39,6 +39,7 @@ class HomeController < ApplicationController
   end
 
   def team
+    @team_number = params[:team_number].to_i
   end
   
 end

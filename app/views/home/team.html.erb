@@ -1,24 +1,13 @@
 <br/>
 <div class="card">
     <div class="card-header gray"><br/>
-        <h5 class="card-header gray">How Many Team Members Do You Want ?</h5>
-            <div class="card-body">
-            <br/>
-                <div class="row">
-                <br/>
-                    <div class ="col-md-4">
-                        <%= form_tag home_team_path, :method => 'POST' do%>
-                            <%= submit_tag 'Build Your Team!' %>
-                        <% end %>
-                    </div>
-
-                    <div class="col-md-4">
-                    </div>
-
-                    <div class="col-md-4">
-                    </div>
-                </div>
-            </div>
-            <br/>
+        <h5 class="card-header gray"> <%if @team_number > 0 %> Your Superhero Team ... <%else%> How Many Team Members Do You Want ? <%end%></h5>
+         <br/>   
+        <% if @team_number > 0%>
+            <%= render partial: 'home/show_team'%>
+        <% else%>
+            <%=render partial: 'home/create_team'%>
+        <% end %>
+        <br/>
     <h5 class="card-footer gray"><%= link_to 'Home Page', root_path %></h5>
 </div>
